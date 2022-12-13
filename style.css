@@ -6,15 +6,57 @@
 .container {
     text-align: center;
     display: grid;
-    grid-template-columns: 1fr, 4fr;
+    grid-template-columns: repeat(4, 1fr);
+    height:100vh;
 }
-
+.header {
+    display: grid;
+    justify-content: center;
+    grid-row: 1;
+    grid-column: 2/5;
+}
+.buttons {
+    color:white;
+    background-color: blue;
+    border-radius: 20px;
+    justify-items: end;
+}
 .sidebar {
     display: grid;
-    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    grid-column-start: 1;
+    gap: 20px;
     background-color: lightblue;
 }
 
-.cards {
+.title {
+    font-size: 18px;
+    font-weight: bolder;
+}
+.main {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column: 2/5;
+    background-color: antiquewhite;
+}
+ .cards {
+    height: 200px;
+    border: 1px solid black;
+}
+
+.subheader1 {
+    display: grid;
+    grid-column: span 2;
+    justify-content: start;
+}
+.subheader2{
+display: grid;
+grid-column: 3/4;
+grid-row: 1/ 3;
+}
+
+.subheader3{
+    display: grid;
+    grid-column: 3/4;
+    grid-row: 3/4;
 }
