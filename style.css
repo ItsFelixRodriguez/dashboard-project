@@ -21,8 +21,10 @@
     background-color: blue;
     border-radius: 20px;
     justify-items: end;
+   justify-content: center;
 }
 
+/* Side Bar Content, added a hover effect to the buttons. Different color used for .admin */
 .sidebar {
     font-weight: bold;
     color: white;
@@ -33,12 +35,28 @@
     background-color: rgb(40, 182, 230);
 }
 
+button {
+    border: none;
+    border-radius: 10px;
+}
+
+button:hover {
+background-color: orange;
+color: white;
+}
+
 .nav,
 .admin {
     background-color: rgb(40, 182, 230);
     color: white;
     font-weight: bold;
 }
+
+.admin:hover {
+    background-color: rgb(180, 222, 26);
+    color: whitesmoke;
+}
+/* Main Body of Dashboard  */
 .title {
     font-size: 18px;
     font-weight: bolder;
@@ -53,8 +71,12 @@
  .cards {
     height: 200px;
     border: 1px solid black;
-    margin-left: 10px;
-    
+    margin-left: 10px;   
+}
+
+.cards:hover {
+    transition: transform .2s; /*Animation*/
+    transform: scale(1.1);
 }
 
 .subheader1 {
