@@ -1,3 +1,5 @@
+font-family: 'Inter', sans-serif;
+
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +12,7 @@
     height:100vh;
 }
 .header {
+    background-color: #cffafe;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
     justify-content: center;
@@ -18,12 +21,25 @@
 }
 .buttons {
     color:white;
-    background-color: blue;
+    background-color:#0e7490;
     border-radius: 20px;
-    justify-items: end;
-   justify-content: center;
 }
-
+.buttons:hover {
+    background-color: #06b6d4;
+}
+.searchbar {
+    display: grid;
+    grid-row: 2fr;
+    margin-left: 1.25rem;
+}
+.welcome {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: -30px;
+    font-weight: 600;
+    justify-content: center;
+}
 /* Side Bar Content, added a hover effect to the buttons. Different color used for .admin */
 .sidebar {
     font-weight: bold;
@@ -32,9 +48,13 @@
     grid-row: 1 / 4;
     grid-column-start: 1;
     gap: 20px;
-    background-color: rgb(40, 182, 230);
+    background-color: #164e63;
 }
 
+.dashboard {
+padding: 10px;
+margin: 20px;
+}
 button {
     border: none;
     border-radius: 10px;
@@ -47,38 +67,53 @@ color: white;
 
 .nav,
 .admin {
-    background-color: rgb(40, 182, 230);
+    background-color: #164e63;
     color: white;
     font-weight: bold;
 }
+
 
 .admin:hover {
     background-color: rgb(180, 222, 26);
     color: whitesmoke;
 }
+.admin:last-of-type {
+margin-bottom: 30vh;
+}
 /* Main Body of Dashboard  */
 .title {
     font-size: 18px;
     font-weight: bolder;
+    color: black;
 }
 .main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column: 2/5;
-    background-color: antiquewhite;
+    background-color: #0891b2;
     gap: 15px;
 }
  .cards {
     height: 200px;
     border: 1px solid black;
-    margin-left: 10px;   
+    margin-left: 10px;  
+    background-color: white; 
+    border-left: 30px solid;
+    border-color: #cffafe;
+    border-radius: 2rem;
 }
 
 .cards:hover {
     transition: transform .2s; /*Animation*/
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
+/*Last Column of Main Section */
+.subheader1,
+.subheader2,
+.subheader3 {
 
+    color: #ecfeff;
+}
 .subheader1 {
     margin-left: 10px;
     font-size: 18px;
@@ -86,6 +121,7 @@ color: white;
     display: grid;
     grid-column: span 2;
     justify-content: start;
+   
 }
 .subheader2{
     font-size: 18px;
@@ -93,14 +129,22 @@ color: white;
 display: grid;
 grid-column: 3/4;
 grid-row: 1/ 3;
+margin-top: 20px;
+background-color: white;
+color:#164e63;
+border-radius: 2rem
 }
 
 .subheader3{
+    margin-top: 20px;
     font-size: 18px;
     font-weight: bold;
     display: grid;
     grid-column: 3/4;
     grid-row: 3/4;
+    background-color: white;
+color:#164e63;
+border-radius: 2rem
 }
 
 .content,
