@@ -24,6 +24,10 @@ li {
     grid-row: 1;
     grid-column: 2/5;
 }
+.header {
+    font-size: 16px;
+    color:   #164e63;
+}
 .buttons {
     color:white;
     background-color:#0e7490;
@@ -173,6 +177,11 @@ border-radius: 2rem
 }
 
 .content,
+.people {
+    border-left: 10px solid;
+    border-color: orange;
+}
+.content,
 .trending {
     font-weight: 400;
 }
@@ -191,4 +200,13 @@ border-radius: 1rem;
 margin-right: 5ch;
 width: 200px;
 padding: 15px; 
+}
+
+/* This is an attempt to fiz the last column at half size window  */
+
+@media only screen and (max-width: 900px) {
+    .people,
+    .content {
+        width: 100px;
+    }
 }
